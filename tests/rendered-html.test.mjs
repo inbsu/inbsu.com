@@ -32,6 +32,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /<title>与航 — 向前看<\/title>/);
   assert.match(html, /记录走过的路/);
   assert.match(html, /hello@inbsu\.com/);
+  assert.match(html, /hero-yuhang-temple\.jpg/);
+  assert.match(html, /与航和朋友在天坛前的手绘旅行合影/);
   assert.match(html, /og-yuhang\.png/);
   assert.doesNotMatch(html, /林屿|linyu\.design/);
 });

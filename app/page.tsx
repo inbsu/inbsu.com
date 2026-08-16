@@ -60,13 +60,13 @@ export default function Home() {
               旅途上被记住的瞬间，以及对下一段生活的诚实期待。
             </p>
           </div>
-          <div className="hero-poster" aria-hidden="true">
-            <div className="poster-sun" />
-            <div className="poster-road road-one" />
-            <div className="poster-road road-two" />
-            <span className="poster-place">N 23°39′</span>
-            <span className="poster-year">2026</span>
-            <strong>往前走，<br />也往心里走。</strong>
+          <div className="hero-poster">
+            <img
+              src="/hero-yuhang-temple.jpg"
+              alt="与航和朋友在天坛前的手绘旅行合影"
+              width={1086}
+              height={1448}
+            />
           </div>
         </div>
         <div className="hero-foot">
