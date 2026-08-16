@@ -89,28 +89,24 @@ a { color: inherit; text-decoration: none; }
 .plan-dot { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--clay); left: 19%; bottom: 12%; }
 .note-plan b { position: absolute; right: 7%; bottom: 7%; font-size: clamp(55px, 8vw, 118px); letter-spacing: -.1em; }
 
-.about-section { padding: 130px 4.5vw 115px; background: var(--moss); color: var(--cream); }
+.about-section { padding: 64px 4.5vw 60px; background: var(--moss); color: var(--cream); }
 .eyebrow.light { color: var(--butter); }
-.about-title h2 { margin: 0; max-width: 1200px; font-family: Georgia, "Songti SC", serif; font-size: clamp(52px, 7.2vw, 110px); line-height: 1; letter-spacing: -.06em; font-weight: 500; }
-.about-title h2 em { color: var(--butter); font-weight: 500; }
-.about-translation { margin: 25px 0 0; color: #c8d2c7; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(17px, 1.5vw, 24px); line-height: 1.5; letter-spacing: .1em; }
-.about-content { display: grid; grid-template-columns: .8fr 1.05fr .72fr; gap: 3.2vw; margin-top: 90px; padding-top: 28px; border-top: 1px solid rgba(251,248,239,.35); }
-.portrait-card { min-height: 460px; background: var(--clay); position: relative; overflow: hidden; }
+.about-heading { display: grid; grid-template-columns: .45fr 1.55fr; align-items: start; gap: 4vw; margin-bottom: 42px; }
+.about-heading h2 { margin: 0; max-width: 1040px; font-family: Georgia, "Songti SC", serif; font-size: clamp(36px, 4vw, 58px); line-height: 1.05; letter-spacing: -.045em; font-weight: 500; }
+.about-heading h2 em { color: var(--butter); font-weight: 500; }
+.about-translation { margin: 16px 0 0; color: #c8d2c7; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(14px, 1.15vw, 18px); line-height: 1.5; letter-spacing: .1em; }
+.about-content { display: grid; grid-template-columns: .45fr 1.55fr; border-top: 1px solid rgba(251,248,239,.42); border-bottom: 1px solid rgba(251,248,239,.42); }
+.portrait-card { min-height: 260px; margin: 22px 2.5vw 22px 0; background: var(--clay); position: relative; overflow: hidden; }
 .portrait-sky { position: absolute; width: 76%; aspect-ratio: 1; border-radius: 50%; left: 12%; top: 9%; background: var(--sky); }
 .portrait-face { position: absolute; width: 26%; aspect-ratio: .84; border-radius: 50% 50% 44% 44%; left: 37%; top: 25%; background: var(--ink); }
 .portrait-face::before { content: ""; position: absolute; width: 120%; height: 37%; left: -10%; top: -4%; background: var(--butter); border-radius: 50% 50% 15% 15%; transform: rotate(-6deg); }
 .portrait-shirt { position: absolute; width: 71%; height: 43%; left: 14%; bottom: -7%; border-radius: 50% 50% 0 0; background: var(--ink); }
 .portrait-card > span { position: absolute; right: 17px; bottom: 14px; z-index: 2; color: var(--butter); font-size: 9px; font-weight: 800; letter-spacing: .14em; }
-.about-copy { padding-top: 4px; }
-.about-copy p { margin: 0 0 23px; color: #c8d2c7; font-size: 14px; line-height: 1.85; }
-.about-copy .about-lead { color: var(--cream); font-family: Georgia, "Songti SC", serif; font-size: clamp(24px, 2.3vw, 36px); line-height: 1.45; }
-.about-copy .about-signoff { margin-top: 34px; color: var(--butter); font-family: Georgia, "Songti SC", serif; font-size: 20px; letter-spacing: .08em; }
-.about-copy a { display: inline-block; margin-top: 22px; padding-bottom: 5px; border-bottom: 1px solid var(--cream); font-size: 13px; font-weight: 800; }
-.now-list h3 { margin: 0 0 30px; color: var(--butter); font-size: 10px; letter-spacing: .18em; }
-.now-list > div { padding: 17px 0; border-bottom: 1px solid rgba(251,248,239,.25); }
-.now-list span { display: block; margin-bottom: 7px; color: #9baa9d; font-size: 9px; font-weight: 800; letter-spacing: .12em; }
-.now-list strong { font-family: Georgia, "Songti SC", serif; font-size: 18px; font-weight: 500; }
-.now-list small { display: block; margin-top: 25px; color: #9baa9d; font-size: 9px; }
+.about-copy { max-width: 980px; padding: 27px 0 25px 3vw; border-left: 1px solid rgba(251,248,239,.32); }
+.about-copy p { margin: 0 0 14px; color: #c8d2c7; font-size: 13px; line-height: 1.72; }
+.about-copy .about-lead { color: var(--cream); font-family: Georgia, "Songti SC", serif; font-size: clamp(22px, 2vw, 31px); line-height: 1.4; }
+.about-copy .about-signoff { margin: 22px 0 0; color: var(--butter); font-family: Georgia, "Songti SC", serif; font-size: 18px; letter-spacing: .08em; }
+.about-copy a { display: inline-block; margin-top: 18px; padding-bottom: 4px; border-bottom: 1px solid var(--cream); font-size: 12px; font-weight: 800; }
 
 .plans-section { padding: 135px 4.5vw 125px; }
 .plans-heading { display: grid; grid-template-columns: .55fr 1.45fr; align-items: start; margin-bottom: 70px; }
@@ -184,9 +180,8 @@ footer a { justify-self: end; }
   .featured-note { grid-template-columns: 1fr; }
   .featured-visual { margin-right: 0; }
   .featured-copy { min-height: 430px; border-left: 0; border-top: 1px solid var(--ink); padding-left: 0; }
-  .about-content { grid-template-columns: 1fr 1fr; }
-  .now-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .now-list h3, .now-list small { grid-column: 1 / -1; }
+  .about-heading { grid-template-columns: 1fr; gap: 30px; }
+  .about-content { grid-template-columns: .65fr 1.35fr; }
   .plans-heading { grid-template-columns: 1fr; gap: 30px; }
   .apps-heading { grid-template-columns: 1fr; gap: 30px; }
 }
@@ -212,13 +207,14 @@ footer a { justify-self: end; }
   .note-art { min-height: 300px; margin: 0 0 24px; }
   .note-copy { min-height: 360px; padding: 24px 0 0; border: 0; border-top: 1px solid var(--line); }
   .note-copy h3 { font-size: 38px; }
-  .about-section { padding-top: 95px; padding-bottom: 80px; }
-  .about-title h2 { font-size: 47px; }
-  .about-content { grid-template-columns: 1fr; margin-top: 60px; }
-  .portrait-card { min-height: 400px; }
-  .about-copy { padding: 28px 0; }
-  .about-copy .about-lead { font-size: 25px; }
-  .now-list { grid-column: auto; display: block; }
+  .about-section { padding-top: 58px; padding-bottom: 54px; }
+  .about-heading { margin-bottom: 36px; }
+  .about-heading h2 { font-size: 38px; }
+  .about-translation { font-size: 15px; }
+  .about-content { grid-template-columns: 1fr; }
+  .portrait-card { min-height: 280px; margin: 20px 0; }
+  .about-copy { padding: 26px 0 22px; border-left: 0; border-top: 1px solid rgba(251,248,239,.32); }
+  .about-copy .about-lead { font-size: 24px; }
   .plans-section { padding-top: 95px; padding-bottom: 90px; }
   .plans-heading h2 { font-size: 50px; }
   .plans-grid { grid-template-columns: 1fr; }

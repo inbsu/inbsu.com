@@ -127,11 +127,13 @@ export default function Home() {
       */}
 
       <section className="about-section" id="about" aria-labelledby="about-title">
-        <div className="about-title">
+        <header className="about-heading">
           <span className="eyebrow light">ABOUT</span>
-          <h2 id="about-title">Vast as the world may be,<br /><em>I keep moving toward the horizon.</em></h2>
-          <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
-        </div>
+          <div>
+            <h2 id="about-title">Vast as the world may be, <em>I keep moving toward the horizon.</em></h2>
+            <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
+          </div>
+        </header>
         <div className="about-content">
           <div className="portrait-card" aria-label="与航的抽象人物肖像">
             <div className="portrait-sky" />
@@ -146,14 +148,6 @@ export default function Home() {
             <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
             <p className="about-signoff">向前看。</p>
             <a href="mailto:hello@inbsu.com">hello@inbsu.com ↗</a>
-          </div>
-          <div className="now-list">
-            <h3>此刻 / NOW</h3>
-            <div><span>正在读</span><strong>《远山淡影》</strong></div>
-            <div><span>正在学</span><strong>自由泳换气</strong></div>
-            <div><span>下一站</span><strong>大理 · 九月</strong></div>
-            <div><span>循环播放</span><strong>橘子海</strong></div>
-            <small>最后更新：2026.08.12</small>
           </div>
         </div>
       </section>

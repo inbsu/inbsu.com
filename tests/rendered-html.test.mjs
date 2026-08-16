@@ -65,6 +65,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /A lightweight, self-hosted relay service|A self-hosted library for personal photos|A self-hosted library for video collections/);
   assert.doesNotMatch(html, /Media Library/);
   assert.match(html, />ABOUT<\/span>/);
+  assert.match(html, /class="about-heading"/);
   assert.doesNotMatch(html, /ABOUT \/ 关于与航/);
   assert.match(html, /Vast as the world may be/);
   assert.match(html, /I keep moving toward the horizon/);
@@ -75,6 +76,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /人生不必事事圆满。/);
   assert.match(html, /比起留下谁，我更在意留下些什么——/);
   assert.match(html, /class="about-signoff">向前看。/);
+  assert.doesNotMatch(html, /此刻 \/ NOW|正在读|《远山淡影》|自由泳换气|大理 · 九月|循环播放|橘子海|最后更新/);
   assert.doesNotMatch(html, /人生或许不必|继续向前的理由|有些时刻并不轰轰烈烈|我用文字保存那些容易被忘记的部分|这个网站是我的公开笔记本/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
   assert.doesNotMatch(html, /把愿望写具体/);
