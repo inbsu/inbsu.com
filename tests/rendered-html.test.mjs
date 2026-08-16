@@ -70,8 +70,13 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /I keep moving toward the horizon/);
   assert.match(html, /纵天地巍峨，仍向远方行。/);
   assert.doesNotMatch(html, /在确定与不确定之间|认真生活/);
-  assert.match(html, /我去过一些地方，遇见过一些人，而这些共同构成了今天的我。/);
-  assert.doesNotMatch(html, /你好，我是与航。喜欢把脚步放慢/);
+  assert.match(html, /我去过一些地方，也遇见过一些人。/);
+  assert.match(html, /有些同行很久，有些只陪一程/);
+  assert.match(html, /人生或许不必事事圆满。/);
+  assert.match(html, /比起留下谁，我更在意留下些什么——/);
+  assert.match(html, /有些时刻并不轰轰烈烈，却值得被记住。/);
+  assert.match(html, /class="about-signoff">向前看。/);
+  assert.doesNotMatch(html, /我用文字保存那些容易被忘记的部分|这个网站是我的公开笔记本/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
   assert.doesNotMatch(html, /把愿望写具体/);
   assert.doesNotMatch(html, /如果你也在路上/);

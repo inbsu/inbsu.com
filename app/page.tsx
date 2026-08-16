@@ -140,9 +140,12 @@ export default function Home() {
             <span>YH / 2026</span>
           </div>
           <div className="about-copy">
-            <p className="about-lead">我去过一些地方，遇见过一些人，而这些共同构成了今天的我。</p>
-            <p>我用文字保存那些容易被忘记的部分：一顿普通的晚饭、陌生城市的清晨、一个念头从出现到成形的过程。</p>
-            <p>这个网站是我的公开笔记本。没有固定更新频率，也不追求面面俱到，只写此刻真正关心的事。</p>
+            <p className="about-lead">我去过一些地方，也遇见过一些人。</p>
+            <p>有些同行很久，有些只陪一程，但那些发生过的事，都慢慢成为了今天的我。</p>
+            <p>人生或许不必事事圆满。</p>
+            <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变，或是继续向前的理由。</p>
+            <p>有些时刻并不轰轰烈烈，却值得被记住。旅行、生活，以及那些曾经照亮过我的普通瞬间。</p>
+            <p className="about-signoff">向前看。</p>
             <a href="mailto:hello@inbsu.com">hello@inbsu.com ↗</a>
           </div>
           <div className="now-list">
