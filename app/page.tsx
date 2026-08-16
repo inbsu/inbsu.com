@@ -139,7 +139,7 @@ export default function Home() {
             <div className="portrait-sky" />
             <div className="portrait-face" />
             <div className="portrait-shirt" />
-            <span>YH / 2026</span>
+            <span>鸡蛋 / 2026</span>
           </div>
           <div className="about-copy">
             <p className="about-lead">我去过一些地方，<br />也遇见过一些人。</p>
