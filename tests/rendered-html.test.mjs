@@ -33,7 +33,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /<html lang="en">/);
   assert.match(html, /Places I’ve been/);
   assert.match(html, /days as they unfold/);
-  assert.match(html, /hello@inbsu\.com/);
+  assert.doesNotMatch(html, /hello@inbsu\.com/);
   assert.match(html, /hero-yuhang-temple\.jpg/);
   assert.match(html, /A hand-drawn travel portrait of Yu Hang/);
   assert.match(html, /MY APPS/);
@@ -51,6 +51,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /Explore my apps/);
   assert.match(html, /INBSU\.COM · 向前看/);
   assert.doesNotMatch(html, /记录走过的路|我的应用|向下看我的应用/);
+  assert.doesNotMatch(html, /Email me|I’m Yu Hang|YU HANG'S PERSONAL NOTES|Three small tools I host and use myself/);
   assert.match(html, /og-yuhang\.png/);
   assert.doesNotMatch(html, /林屿|linyu\.design/);
 });

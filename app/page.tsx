@@ -47,13 +47,11 @@ export default function Home() {
         </div>
         <div className="nav-actions">
           <button className="language-switch" type="button" disabled data-future-path="/cn" aria-label="Chinese version coming soon">中文</button>
-          <a className="nav-mail" href="mailto:hello@inbsu.com">Email me ↗</a>
         </div>
       </nav>
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-meta">
-          <span>YU HANG&apos;S PERSONAL NOTES</span>
           <span>ISSUE 08 · 2026</span>
         </div>
         <div className="hero-grid">
@@ -64,7 +62,7 @@ export default function Home() {
               <em>days as they unfold.</em>
             </h1>
             <p className="hero-summary">
-              I’m Yu Hang. This is a place for small discoveries in everyday life,
+              This is a place for small discoveries in everyday life,
               moments worth keeping from the road, and honest thoughts about what comes next.
             </p>
           </div>
@@ -83,7 +81,6 @@ export default function Home() {
           <p>不定期更新，通常在清晨或深夜。</p>
           */}
           <a href="#apps">Explore my apps <span aria-hidden="true">↓</span></a>
-          <p>Three small tools I host and use myself.</p>
         </div>
       </section>
 
