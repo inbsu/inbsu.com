@@ -56,15 +56,10 @@ export default function Home() {
         </div>
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="hero-intro">LIFE · TRAVEL · PLANS IN PROGRESS</p>
             <h1 id="hero-title">
               Places I’ve been,
               <em>days as they unfold.</em>
             </h1>
-            <p className="hero-summary">
-              This is a place for small discoveries in everyday life,
-              moments worth keeping from the road, and honest thoughts about what comes next.
-            </p>
           </div>
           <div className="hero-poster">
             <img
