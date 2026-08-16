@@ -10,18 +10,18 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: "与航 — 向前看",
-    description: "与航的个人生活志，记录日常、旅行见闻和那些正在慢慢靠近的计划。",
+    description: "Yu Hang’s personal journal about everyday life, travel, and the things still taking shape.",
     openGraph: {
       title: "与航 — 向前看",
-      description: "记录走过的路，和正在发生的日子。",
+      description: "Places I’ve been, and days as they unfold.",
       type: "website",
-      locale: "zh_CN",
-      images: [{ url: socialImage, width: 1672, height: 941, alt: "与航的个人生活志" }],
+      locale: "en_US",
+      images: [{ url: socialImage, width: 1672, height: 941, alt: "Yu Hang’s personal journal" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "与航 — 向前看",
-      description: "记录走过的路，和正在发生的日子。",
+      description: "Places I’ve been, and days as they unfold.",
       images: [socialImage],
     },
   };
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

@@ -33,8 +33,8 @@ const notes = [
 export default function Home() {
   return (
     <main id="top">
-      <nav className="nav" aria-label="主导航">
-        <a className="wordmark" href="#top" aria-label="返回首页顶部">
+      <nav className="nav" aria-label="Main navigation">
+        <a className="wordmark" href="#top" aria-label="Back to top">
           与航<span>。</span>
         </a>
         <div className="nav-links">
@@ -43,9 +43,12 @@ export default function Home() {
           <a href="#about">关于</a>
           <a href="#plans">计划</a>
           */}
-          <a href="#apps">应用</a>
+          <a href="#apps">Apps</a>
         </div>
-        <a className="nav-mail" href="mailto:hello@inbsu.com">写信给我 ↗</a>
+        <div className="nav-actions">
+          <button className="language-switch" type="button" disabled data-future-path="/cn" aria-label="Chinese version coming soon">中文</button>
+          <a className="nav-mail" href="mailto:hello@inbsu.com">Email me ↗</a>
+        </div>
       </nav>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -55,20 +58,20 @@ export default function Home() {
         </div>
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="hero-intro">生活 · 旅行 · 一些尚未完成的计划</p>
+            <p className="hero-intro">LIFE · TRAVEL · PLANS IN PROGRESS</p>
             <h1 id="hero-title">
-              记录走过的路，
-              <em>和正在发生的日子。</em>
+              Places I’ve been,
+              <em>days as they unfold.</em>
             </h1>
             <p className="hero-summary">
-              我是与航。这里没有标准答案，只有日常里的小发现、
-              旅途上被记住的瞬间，以及对下一段生活的诚实期待。
+              I’m Yu Hang. This is a place for small discoveries in everyday life,
+              moments worth keeping from the road, and honest thoughts about what comes next.
             </p>
           </div>
           <div className="hero-poster">
             <img
               src="/hero-yuhang-temple.jpg"
-              alt="与航和朋友在天坛前的手绘旅行合影"
+              alt="A hand-drawn travel portrait of Yu Hang and a friend at the Temple of Heaven"
               width={1086}
               height={1448}
             />
@@ -79,8 +82,8 @@ export default function Home() {
           <a href="#notes">向下读最近的文章 <span aria-hidden="true">↓</span></a>
           <p>不定期更新，通常在清晨或深夜。</p>
           */}
-          <a href="#apps">向下看我的应用 <span aria-hidden="true">↓</span></a>
-          <p>三个自己部署，也持续使用的小应用。</p>
+          <a href="#apps">Explore my apps <span aria-hidden="true">↓</span></a>
+          <p>Three small tools I host and use myself.</p>
         </div>
       </section>
 
@@ -195,37 +198,37 @@ export default function Home() {
 
       <section className="apps-section" id="apps" aria-labelledby="apps-title">
         <header className="apps-heading">
-          <span className="eyebrow light">MY APPS / 我的应用</span>
+          <span className="eyebrow light">MY APPS</span>
           <div>
-            <h2 id="apps-title">自己部署，<em>也自己使用。</em></h2>
-            <p>从日常需要出发，慢慢搭建，也持续维护。</p>
+            <h2 id="apps-title">Self-hosted, <em>made for everyday use.</em></h2>
+            <p>Built around everyday needs, then maintained at my own pace.</p>
           </div>
         </header>
         <div className="apps-grid">
-          <a className="app-card app-relay" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Relay（新窗口）">
+          <a className="app-card app-relay" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
             <div className="app-card-top"><span>01</span><span>SELF-HOSTED ↗</span></div>
             <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
               <h3>Relay</h3>
-              <p>一个轻量、直接的连接入口。</p>
+              <p>A lightweight, self-hosted relay service.</p>
               <small>relay.inbsu.com</small>
             </div>
           </a>
-          <a className="app-card app-photos" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Photos（新窗口）">
+          <a className="app-card app-photos" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
             <div className="app-card-top"><span>02</span><span>SELF-HOSTED ↗</span></div>
             <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
               <h3>Photos</h3>
-              <p>收藏和整理生活里的影像。</p>
+              <p>A self-hosted library for personal photos.</p>
               <small>photos.inbsu.com</small>
             </div>
           </a>
-          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Videos（新窗口）">
+          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
             <div className="app-card-top"><span>03</span><span>SELF-HOSTED ↗</span></div>
             <div className="app-mark mark-media" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
               <h3>Videos</h3>
-              <p>收藏和观看喜欢的视频内容。</p>
+              <p>A self-hosted library for video collections.</p>
               <small>v.inbsu.com</small>
             </div>
           </a>
@@ -244,9 +247,9 @@ export default function Home() {
       */}
 
       <footer>
-        <p>© 2026 与航 / YU HANG</p>
-        <p>INBSU.COM · 从生活出发</p>
-        <a href="#top">回到顶部 ↑</a>
+        <p>© 2026 YU HANG</p>
+        <p>INBSU.COM · 向前看</p>
+        <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>
   );
