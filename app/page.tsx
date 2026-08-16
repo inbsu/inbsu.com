@@ -1,3 +1,4 @@
+/* 暂时隐藏的示例文章数据，后续有真实文章时可直接取消注释。
 const notes = [
   {
     date: "2026.07.28",
@@ -27,6 +28,7 @@ const notes = [
     index: "03",
   },
 ];
+*/
 
 export default function Home() {
   return (
@@ -36,9 +38,11 @@ export default function Home() {
           与航<span>。</span>
         </a>
         <div className="nav-links">
+          {/* 暂时隐藏尚未启用的内容入口，后续可直接恢复。
           <a href="#notes">文章</a>
           <a href="#about">关于</a>
           <a href="#plans">计划</a>
+          */}
           <a href="#apps">应用</a>
         </div>
         <a className="nav-mail" href="mailto:hello@inbsu.com">写信给我 ↗</a>
@@ -71,11 +75,16 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-foot">
+          {/* 原文章入口暂时保留，恢复文章栏目时可重新启用。
           <a href="#notes">向下读最近的文章 <span aria-hidden="true">↓</span></a>
           <p>不定期更新，通常在清晨或深夜。</p>
+          */}
+          <a href="#apps">向下看我的应用 <span aria-hidden="true">↓</span></a>
+          <p>三个自己部署，也持续使用的小应用。</p>
         </div>
       </section>
 
+      {/* 暂时隐藏的示例内容：文章、关于与计划。保留源码，待真实内容准备好后恢复。
       <section className="notes-section" id="notes" aria-labelledby="notes-title">
         <header className="section-header">
           <div>
@@ -182,6 +191,7 @@ export default function Home() {
           </article>
         </div>
       </section>
+      */}
 
       <section className="apps-section" id="apps" aria-labelledby="apps-title">
         <header className="apps-heading">
@@ -210,18 +220,19 @@ export default function Home() {
               <small>photos.inbsu.com</small>
             </div>
           </a>
-          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Media Library（新窗口）">
+          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Videos（新窗口）">
             <div className="app-card-top"><span>03</span><span>SELF-HOSTED ↗</span></div>
             <div className="app-mark mark-media" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
-              <h3>Media Library</h3>
-              <p>为影像与媒体保留的私人书架。</p>
+              <h3>Videos</h3>
+              <p>收藏和观看喜欢的视频内容。</p>
               <small>v.inbsu.com</small>
             </div>
           </a>
         </div>
       </section>
 
+      {/* 暂时隐藏的大块联系栏目，邮箱入口仍保留在顶部导航中。
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <span className="eyebrow">SAY HELLO / 写封信</span>
         <h2 id="contact-title">如果你也在路上，<br /><em>欢迎来信。</em></h2>
@@ -230,6 +241,7 @@ export default function Home() {
           <a href="mailto:hello@inbsu.com">hello@inbsu.com <span aria-hidden="true">↗</span></a>
         </div>
       </section>
+      */}
 
       <footer>
         <p>© 2026 与航 / YU HANG</p>
