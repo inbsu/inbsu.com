@@ -30,6 +30,7 @@ a { color: inherit; text-decoration: none; }
 .hero-copy { min-width: 0; padding: clamp(32px, 5vw, 76px); position: relative; z-index: 2; overflow: hidden; display: flex; flex-direction: column; }
 .hero-copy::before { content: ""; width: clamp(150px, 18vw, 280px); aspect-ratio: 1; border: 1px solid rgba(27,32,29,.2); border-radius: 50%; background: rgba(241,210,106,.46); position: absolute; right: -9%; bottom: 14%; }
 .hero-meta { position: relative; z-index: 2; font-size: 9px; font-weight: 800; letter-spacing: .16em; }
+.hero-location { display: block; margin-top: 10px; color: rgba(27,32,29,.58); font-size: 10px; font-weight: 500; letter-spacing: .08em; }
 .hero-title-group { margin: auto 0; position: relative; z-index: 2; }
 .hero h1 { margin: 0; max-width: 880px; font-family: Georgia, "Songti SC", "STSong", serif; font-size: clamp(58px, 6.1vw, 100px); line-height: .93; letter-spacing: -.055em; font-weight: 500; }
 .hero h1 em { display: block; color: var(--clay); font-weight: 500; }

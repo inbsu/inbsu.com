@@ -54,7 +54,8 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <div className="hero-meta">
-              <span>ISSUE 08 · 2026</span>
+              <span>ISSUE 01 · 2026</span>
+              <span className="hero-location">Beijing, China</span>
             </div>
             <div className="hero-title-group">
               <h1 id="hero-title">
@@ -139,7 +140,7 @@ export default function Home() {
             <span>YH / 2026</span>
           </div>
           <div className="about-copy">
-            <p className="about-lead">你好，我是与航。喜欢把脚步放慢，也喜欢偶尔出发去很远的地方。</p>
+            <p className="about-lead">我去过一些地方，遇见过一些人，而这些共同构成了今天的我。</p>
             <p>我用文字保存那些容易被忘记的部分：一顿普通的晚饭、陌生城市的清晨、一个念头从出现到成形的过程。</p>
             <p>这个网站是我的公开笔记本。没有固定更新频率，也不追求面面俱到，只写此刻真正关心的事。</p>
             <a href="mailto:hello@inbsu.com">hello@inbsu.com ↗</a>
