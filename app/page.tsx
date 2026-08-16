@@ -39,6 +39,7 @@ export default function Home() {
           <a href="#notes">文章</a>
           <a href="#about">关于</a>
           <a href="#plans">计划</a>
+          <a href="#apps">应用</a>
         </div>
         <a className="nav-mail" href="mailto:hello@inbsu.com">写信给我 ↗</a>
       </nav>
@@ -179,6 +180,45 @@ export default function Home() {
             <div className="progress"><i style={{ width: "25%" }} /></div>
             <small>25% · 已完成目录</small>
           </article>
+        </div>
+      </section>
+
+      <section className="apps-section" id="apps" aria-labelledby="apps-title">
+        <header className="apps-heading">
+          <span className="eyebrow light">MY APPS / 我的应用</span>
+          <div>
+            <h2 id="apps-title">一些自己部署，<br /><em>也一直在用的工具。</em></h2>
+            <p>从日常需要出发，慢慢搭建，也持续维护。</p>
+          </div>
+        </header>
+        <div className="apps-grid">
+          <a className="app-card app-relay" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Relay（新窗口）">
+            <div className="app-card-top"><span>01</span><span>SELF-HOSTED ↗</span></div>
+            <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
+            <div className="app-card-copy">
+              <h3>Relay</h3>
+              <p>一个轻量、直接的连接入口。</p>
+              <small>relay.inbsu.com</small>
+            </div>
+          </a>
+          <a className="app-card app-photos" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Photos（新窗口）">
+            <div className="app-card-top"><span>02</span><span>SELF-HOSTED ↗</span></div>
+            <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
+            <div className="app-card-copy">
+              <h3>Photos</h3>
+              <p>收藏和整理生活里的影像。</p>
+              <small>photos.inbsu.com</small>
+            </div>
+          </a>
+          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="打开 Media Library（新窗口）">
+            <div className="app-card-top"><span>03</span><span>SELF-HOSTED ↗</span></div>
+            <div className="app-mark mark-media" aria-hidden="true"><i /><b /></div>
+            <div className="app-card-copy">
+              <h3>Media Library</h3>
+              <p>为影像与媒体保留的私人书架。</p>
+              <small>v.inbsu.com</small>
+            </div>
+          </a>
         </div>
       </section>
 
