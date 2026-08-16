@@ -60,8 +60,9 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /https:\/\/jellyfin\.org\//);
   assert.match(html, /Explore the world\./);
   assert.doesNotMatch(html, /Wander the World\./);
-  assert.match(html, /Revisit the Past\./);
-  assert.match(html, /Hold What I Love Close\./);
+  assert.match(html, /Revisit the past\./);
+  assert.match(html, /Hold what I love close\./);
+  assert.doesNotMatch(html, /Revisit the Past\.|Hold What I Love Close\./);
   assert.match(html, />看世界<\/span>/);
   assert.match(html, />忆往昔<\/span>/);
   assert.match(html, />藏所爱<\/span>/);

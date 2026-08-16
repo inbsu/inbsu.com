@@ -223,7 +223,7 @@ export default function Home() {
               <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
               <div className="app-card-copy">
                 <h3><a href="https://photos.inbsu.com" target="_blank" rel="noreferrer">Photos</a></h3>
-                <p>Revisit the Past.<span className="app-tagline-cn" lang="zh-CN">忆往昔</span></p>
+                <p>Revisit the past.<span className="app-tagline-cn" lang="zh-CN">忆往昔</span></p>
               </div>
             </div>
             <a className="app-domain" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
@@ -239,7 +239,7 @@ export default function Home() {
               <div className="app-mark mark-videos" aria-hidden="true" />
               <div className="app-card-copy">
                 <h3><a href="https://v.inbsu.com" target="_blank" rel="noreferrer">Videos</a></h3>
-                <p>Hold What I Love Close.<span className="app-tagline-cn" lang="zh-CN">藏所爱</span></p>
+                <p>Hold what I love close.<span className="app-tagline-cn" lang="zh-CN">藏所爱</span></p>
               </div>
             </div>
             <a className="app-domain" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
