@@ -29,7 +29,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>与航 — 生活、旅行与未来计划<\/title>/);
+  assert.match(html, /<title>与航 — 向前看<\/title>/);
   assert.match(html, /记录走过的路/);
   assert.match(html, /hello@inbsu\.com/);
   assert.match(html, /og-yuhang\.png/);

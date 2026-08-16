@@ -9,10 +9,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const socialImage = `${protocol}://${host}/og-yuhang.png`;
 
   return {
-    title: "与航 — 生活、旅行与未来计划",
+    title: "与航 — 向前看",
     description: "与航的个人生活志，记录日常、旅行见闻和那些正在慢慢靠近的计划。",
     openGraph: {
-      title: "与航 — 生活、旅行与未来计划",
+      title: "与航 — 向前看",
       description: "记录走过的路，和正在发生的日子。",
       type: "website",
       locale: "zh_CN",
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "与航 — 生活、旅行与未来计划",
+      title: "与航 — 向前看",
       description: "记录走过的路，和正在发生的日子。",
       images: [socialImage],
     },
