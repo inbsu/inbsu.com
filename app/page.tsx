@@ -130,7 +130,7 @@ export default function Home() {
         <header className="about-heading">
           <span className="eyebrow light">ABOUT</span>
           <div>
-            <h2 id="about-title">Vast as the world may be, <em>I keep moving toward the horizon.</em></h2>
+            <h2 id="about-title">Vast as the world may be,<br /><em>I keep moving toward the horizon.</em></h2>
             <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
           </div>
         </header>

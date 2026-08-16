@@ -74,6 +74,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /ABOUT \/ 关于与航/);
   assert.match(html, /Vast as the world may be/);
   assert.match(html, /I keep moving toward the horizon/);
+  assert.match(html, /Vast as the world may be,<br\/><em>I keep moving toward the horizon\.<\/em>/);
   assert.match(html, /纵天地巍峨，仍向远方行。/);
   assert.doesNotMatch(html, /在确定与不确定之间|认真生活/);
   assert.match(html, /我去过一些地方，也遇见过一些人。/);
