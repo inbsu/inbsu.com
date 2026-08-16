@@ -1,90 +1,47 @@
-# Taxonomy
+# inbsu.com
 
-An open source application built using the new router, server components and everything new in Next.js 13.
+与航的个人生活志，记录生活、旅行和一些正在发生的计划。
 
-> **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
-> See the roadmap below.
+## 技术结构
 
-## About this project
+- Vinext + React
+- Cloudflare Vite plugin
+- Cloudflare Workers + Static Assets
+- GitHub Actions 持续部署
 
-This project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+## 本地开发
 
-**This is not a starter template.**
+需要 Node.js 22.13 或更高版本。
 
-A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
-
-## Note on Performance
-
-> **Warning**
-> This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
-> **Expect some performance hits when testing the dashboard**.
-> If you see something broken, you can ping me [@shadcn](https://twitter.com/shadcn).
-
-## Features
-
-- New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups
-- Data Fetching, Caching and Mutation
-- Loading UI
-- Route handlers
-- Metadata files
-- Server and Client Components
-- API Routes and Middlewares
-- Authentication using **NextAuth.js**
-- ORM using **Prisma**
-- Database on **PlanetScale**
-- UI Components built using **Radix UI**
-- Documentation and blog using **MDX** and **Contentlayer**
-- Subscriptions using **Stripe**
-- Styled using **Tailwind CSS**
-- Validations using **Zod**
-- Written in **TypeScript**
-
-## Roadmap
-
-- [x] ~Add MDX support for basic pages~
-- [x] ~Build marketing pages~
-- [x] ~Subscriptions using Stripe~
-- [x] ~Responsive styles~
-- [x] ~Add OG image for blog using @vercel/og~
-- [x] Dark mode
-
-## Known Issues
-
-A list of things not working right now:
-
-1. ~GitHub authentication (use email)~
-2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
-3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
-4. [Cannot use opengraph-image.tsx inside catch-all routes](https://github.com/vercel/next.js/issues/48162)
-
-## Why not tRPC, Turborepo or X?
-
-I might add this later. For now, I want to see how far we can get using Next.js only.
-
-If you have some suggestions, feel free to create an issue.
-
-## Running Locally
-
-1. Install dependencies using pnpm:
-
-```sh
-pnpm install
+```bash
+npm ci
+npm run dev
 ```
 
-2. Copy `.env.example` to `.env.local` and update the variables.
+## 验证
 
-```sh
-cp .env.example .env.local
+```bash
+npm test
 ```
 
-3. Start the development server:
+测试会重新构建站点，并确认首页内容、分享信息和 Cloudflare Worker
+部署产物均正确生成。
 
-```sh
-pnpm dev
+## 部署到 Cloudflare Workers
+
+首次启用 GitHub Actions 前，在仓库的 `Settings → Secrets and variables → Actions`
+中添加：
+
+- `CLOUDFLARE_API_TOKEN`：具有 Workers Scripts 编辑权限的 Cloudflare API Token
+- `CLOUDFLARE_ACCOUNT_ID`：Cloudflare Account ID
+
+合并到 `main` 后，`.github/workflows/deploy-cloudflare.yml` 会自动测试并部署。
+如果尚未添加上述两个 Secrets，工作流只运行构建与测试，不会尝试部署。
+也可以手动执行：
+
+```bash
+npm run deploy
 ```
 
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+为了避免切换期间中断访问，自定义域名 `inbsu.com` 暂不写入 Worker
+配置。先确认 `workers.dev` 地址正常，再把域名从原托管服务切换到新 Worker。

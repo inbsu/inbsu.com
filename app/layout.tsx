@@ -1,94 +1,40 @@
-import { Inter as FontSans } from "next/font/google"
-import localFont from "next/font/local"
+import type { Metadata } from "next";
+import { headers } from "next/headers";
+import "./globals.css";
 
-import "@/styles/globals.css"
-import { siteConfig } from "@/config/site"
-import { absoluteUrl, cn } from "@/lib/utils"
-import { Toaster } from "@/components/ui/toaster"
-import { Analytics } from "@/components/analytics"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("host") ?? "localhost:3000";
+  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
+  const socialImage = `${protocol}://${host}/og-yuhang.png`;
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-// Font files can be colocated inside of `pages`
-const fontHeading = localFont({
-  src: "../assets/fonts/CalSans-SemiBold.woff2",
-  variable: "--font-heading",
-})
-
-interface RootLayoutProps {
-  children: React.ReactNode
-}
-
-export const metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
-  ],
-  authors: [
-    {
-      name: "shadcn",
-      url: "https://shadcn.com",
+  return {
+    title: "与航 — 生活、旅行与未来计划",
+    description: "与航的个人生活志，记录日常、旅行见闻和那些正在慢慢靠近的计划。",
+    openGraph: {
+      title: "与航 — 生活、旅行与未来计划",
+      description: "记录走过的路，和正在发生的日子。",
+      type: "website",
+      locale: "zh_CN",
+      images: [{ url: socialImage, width: 1672, height: 941, alt: "与航的个人生活志" }],
     },
-  ],
-  creator: "shadcn",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+    twitter: {
+      card: "summary_large_image",
+      title: "与航 — 生活、旅行与未来计划",
+      description: "记录走过的路，和正在发生的日子。",
+      images: [socialImage],
+    },
+  };
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontHeading.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Analytics />
-          <Toaster />
-          <TailwindIndicator />
-        </ThemeProvider>
-      </body>
+    <html lang="zh-CN">
+      <body>{children}</body>
     </html>
-  )
+  );
 }
