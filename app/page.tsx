@@ -149,6 +149,7 @@ export default function Home() {
             <p className="about-signoff">向前看。</p>
             <div className="about-links" aria-label="Social link">
               <a href="https://x.com/yuinbsu" target="_blank" rel="noreferrer">X · @yuinbsu ↗</a>
+              <a href="https://www.youtube.com/@inbsu" target="_blank" rel="noreferrer">YouTube · @inbsu ↗</a>
             </div>
           </div>
         </div>

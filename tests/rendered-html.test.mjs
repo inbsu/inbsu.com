@@ -37,6 +37,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /hello@inbsu\.com|mailto:/);
   assert.match(html, /https:\/\/x\.com\/yuinbsu/);
   assert.match(html, /X · @yuinbsu ↗/);
+  assert.match(html, /https:\/\/www\.youtube\.com\/@inbsu/);
+  assert.match(html, /YouTube · @inbsu ↗/);
   assert.match(html, /hero-yuhang-temple\.jpg/);
   assert.match(html, /A hand-drawn travel portrait of Yu Hang/);
   assert.match(html, /MY APPS/);
