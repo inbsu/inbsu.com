@@ -34,12 +34,13 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /Places I’ve been/);
   assert.match(html, /days as they unfold/);
   assert.match(html, /足迹所至，岁月如流。/);
-  assert.doesNotMatch(html, /hello@inbsu\.com/);
+  assert.match(html, /hello@inbsu\.com/);
   assert.match(html, /hero-yuhang-temple\.jpg/);
   assert.match(html, /A hand-drawn travel portrait of Yu Hang/);
   assert.match(html, /MY APPS/);
   assert.match(html, /href="\/">Home<\/a>/);
   assert.doesNotMatch(html, /href="\/#top">Home<\/a>/);
+  assert.match(html, /href="#about">About<\/a>/);
   assert.doesNotMatch(html, /data-future-path="\/cn"/);
   assert.doesNotMatch(html, />中文<\/button>/);
   assert.match(html, /https:\/\/relay\.inbsu\.com/);
@@ -62,6 +63,9 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /SELF-HOSTED/);
   assert.doesNotMatch(html, /A lightweight, self-hosted relay service|A self-hosted library for personal photos|A self-hosted library for video collections/);
   assert.doesNotMatch(html, /Media Library/);
+  assert.match(html, /ABOUT \/ 关于与航/);
+  assert.match(html, /在确定与不确定之间/);
+  assert.match(html, /你好，我是与航/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
   assert.doesNotMatch(html, /把愿望写具体/);
   assert.doesNotMatch(html, /如果你也在路上/);

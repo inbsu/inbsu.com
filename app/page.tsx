@@ -42,10 +42,10 @@ export default function Home() {
         <div className="nav-links">
           {/* 暂时隐藏尚未启用的内容入口，后续可直接恢复。
           <a href="#notes">文章</a>
-          <a href="#about">关于</a>
           <a href="#plans">计划</a>
           */}
           <Link href="/">Home</Link>
+          <a href="#about">About</a>
           <a href="#apps">Apps</a>
         </div>
       </nav>
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 暂时隐藏的示例内容：文章、关于与计划。保留源码，待真实内容准备好后恢复。
+      {/* 暂时隐藏的示例文章内容。保留源码，待真实内容准备好后恢复。
       <section className="notes-section" id="notes" aria-labelledby="notes-title">
         <header className="section-header">
           <div>
@@ -123,6 +123,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      */}
 
       <section className="about-section" id="about" aria-labelledby="about-title">
         <div className="about-title">
@@ -153,6 +154,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 暂时隐藏的计划内容。保留源码，待真实内容准备好后恢复。
       <section className="plans-section" id="plans" aria-labelledby="plans-title">
         <header className="plans-heading">
           <span className="eyebrow">PLANS / 接下来</span>
