@@ -48,9 +48,6 @@ export default function Home() {
           <Link href="/">Home</Link>
           <a href="#apps">Apps</a>
         </div>
-        <div className="nav-actions">
-          <button className="language-switch" type="button" disabled data-future-path="/cn" aria-label="Chinese version coming soon">中文</button>
-        </div>
       </nav>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -59,10 +56,13 @@ export default function Home() {
             <div className="hero-meta">
               <span>ISSUE 08 · 2026</span>
             </div>
-            <h1 id="hero-title">
-              Places I’ve been,
-              <em>days as they unfold.</em>
-            </h1>
+            <div className="hero-title-group">
+              <h1 id="hero-title">
+                Places I’ve been,
+                <em>days as they unfold.</em>
+              </h1>
+              <p className="hero-translation" lang="zh-CN">足迹所至，岁月如流。</p>
+            </div>
             {/* 原文章入口暂时保留，恢复文章栏目时可重新启用。
             <a href="#notes">Read the latest notes <span aria-hidden="true">↓</span></a>
             */}
@@ -200,42 +200,48 @@ export default function Home() {
               <span>01</span>
               <a href="https://docs.sanaei.dev/" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI website">POWERED BY 3X-UI ↗</a>
             </div>
-            <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
-            <div className="app-card-copy">
-              <h3><a href="https://relay.inbsu.com" target="_blank" rel="noreferrer">Relay</a></h3>
-              <p>Wander the World.</p>
-              <a className="app-domain" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
-                <span>relay.inbsu.com</span><span aria-hidden="true">↗</span>
-              </a>
+            <div className="app-card-content">
+              <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
+              <div className="app-card-copy">
+                <h3><a href="https://relay.inbsu.com" target="_blank" rel="noreferrer">Relay</a></h3>
+                <p>Wander the World.<span className="app-tagline-cn" lang="zh-CN">看世界</span></p>
+              </div>
             </div>
+            <a className="app-domain" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
+              <span>relay.inbsu.com</span><span aria-hidden="true">↗</span>
+            </a>
           </article>
           <article className="app-card app-photos">
             <div className="app-card-top">
               <span>02</span>
               <a href="https://immich.app/" target="_blank" rel="noreferrer" aria-label="Visit the official Immich website">POWERED BY IMMICH ↗</a>
             </div>
-            <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
-            <div className="app-card-copy">
-              <h3><a href="https://photos.inbsu.com" target="_blank" rel="noreferrer">Photos</a></h3>
-              <p>Revisit the Past.</p>
-              <a className="app-domain" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
-                <span>photos.inbsu.com</span><span aria-hidden="true">↗</span>
-              </a>
+            <div className="app-card-content">
+              <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
+              <div className="app-card-copy">
+                <h3><a href="https://photos.inbsu.com" target="_blank" rel="noreferrer">Photos</a></h3>
+                <p>Revisit the Past.<span className="app-tagline-cn" lang="zh-CN">忆往昔</span></p>
+              </div>
             </div>
+            <a className="app-domain" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
+              <span>photos.inbsu.com</span><span aria-hidden="true">↗</span>
+            </a>
           </article>
           <article className="app-card app-media">
             <div className="app-card-top">
               <span>03</span>
               <a href="https://jellyfin.org/" target="_blank" rel="noreferrer" aria-label="Visit the official Jellyfin website">POWERED BY JELLYFIN ↗</a>
             </div>
-            <div className="app-mark mark-videos" aria-hidden="true" />
-            <div className="app-card-copy">
-              <h3><a href="https://v.inbsu.com" target="_blank" rel="noreferrer">Videos</a></h3>
-              <p>Hold What I Love Close.</p>
-              <a className="app-domain" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
-                <span>v.inbsu.com</span><span aria-hidden="true">↗</span>
-              </a>
+            <div className="app-card-content">
+              <div className="app-mark mark-videos" aria-hidden="true" />
+              <div className="app-card-copy">
+                <h3><a href="https://v.inbsu.com" target="_blank" rel="noreferrer">Videos</a></h3>
+                <p>Hold What I Love Close.<span className="app-tagline-cn" lang="zh-CN">藏所爱</span></p>
+              </div>
             </div>
+            <a className="app-domain" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
+              <span>v.inbsu.com</span><span aria-hidden="true">↗</span>
+            </a>
           </article>
         </div>
       </section>
