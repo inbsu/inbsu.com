@@ -187,7 +187,7 @@ export default function Home() {
         <header className="apps-heading">
           <span className="eyebrow light">MY APPS / 我的应用</span>
           <div>
-            <h2 id="apps-title">一些自己部署，<br /><em>也一直在用的工具。</em></h2>
+            <h2 id="apps-title">自己部署，<em>也自己使用。</em></h2>
             <p>从日常需要出发，慢慢搭建，也持续维护。</p>
           </div>
         </header>
