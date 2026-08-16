@@ -54,8 +54,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <div className="hero-meta">
-              <span>ISSUE 08</span>
-              <span>2026</span>
+              <span>ISSUE 08 · 2026</span>
             </div>
             <h1 id="hero-title">
               Places I’ve been,
@@ -64,7 +63,6 @@ export default function Home() {
             {/* 原文章入口暂时保留，恢复文章栏目时可重新启用。
             <a href="#notes">Read the latest notes <span aria-hidden="true">↓</span></a>
             */}
-            <a className="hero-cta" href="#apps">Explore my apps <span aria-hidden="true">↓</span></a>
           </div>
           <div className="hero-poster">
             <img

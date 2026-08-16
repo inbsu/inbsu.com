@@ -48,7 +48,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /把愿望写具体/);
   assert.doesNotMatch(html, /如果你也在路上/);
   assert.doesNotMatch(html, /向下读最近的文章/);
-  assert.match(html, /Explore my apps/);
+  assert.doesNotMatch(html, /Explore my apps/);
+  assert.match(html, /ISSUE 08 · 2026/);
   assert.match(html, /INBSU\.COM · 向前看/);
   assert.doesNotMatch(html, /记录走过的路|我的应用|向下看我的应用/);
   assert.doesNotMatch(html, /Email me|I’m Yu Hang|YU HANG'S PERSONAL NOTES|Three small tools I host and use myself/);
