@@ -54,7 +54,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <div className="hero-meta">
-              <span>ISSUE 01 · 2026</span>
+              <span>31 JANUARY 2026</span>
               <span className="hero-location">Beijing, China</span>
             </div>
             <div className="hero-title-group">
