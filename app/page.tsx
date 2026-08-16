@@ -142,7 +142,7 @@ export default function Home() {
             <span>YH / 2026</span>
           </div>
           <div className="about-copy">
-            <p className="about-lead">我去过一些地方，也遇见过一些人。</p>
+            <p className="about-lead">我去过一些地方，<br />也遇见过一些人。</p>
             <p>有些同行很久，有些只陪一程，但那些发生过的事，都慢慢成为了今天的我。</p>
             <p>人生不必事事圆满。</p>
             <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
