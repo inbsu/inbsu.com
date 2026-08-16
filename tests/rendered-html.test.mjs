@@ -54,7 +54,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /https:\/\/github\.com\/MHSanaei\/3x-ui/);
   assert.match(html, /https:\/\/immich\.app\//);
   assert.match(html, /https:\/\/jellyfin\.org\//);
-  assert.match(html, /Wander the World\./);
+  assert.match(html, /Explore the world\./);
+  assert.doesNotMatch(html, /Wander the World\./);
   assert.match(html, /Revisit the Past\./);
   assert.match(html, /Hold What I Love Close\./);
   assert.match(html, />看世界<\/span>/);
@@ -63,8 +64,12 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /SELF-HOSTED/);
   assert.doesNotMatch(html, /A lightweight, self-hosted relay service|A self-hosted library for personal photos|A self-hosted library for video collections/);
   assert.doesNotMatch(html, /Media Library/);
-  assert.match(html, /ABOUT \/ 关于与航/);
-  assert.match(html, /在确定与不确定之间/);
+  assert.match(html, />ABOUT<\/span>/);
+  assert.doesNotMatch(html, /ABOUT \/ 关于与航/);
+  assert.match(html, /Vast as the world may be/);
+  assert.match(html, /I keep moving toward the horizon/);
+  assert.match(html, /纵天地巍峨，仍向远方行。/);
+  assert.doesNotMatch(html, /在确定与不确定之间|认真生活/);
   assert.match(html, /你好，我是与航/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
   assert.doesNotMatch(html, /把愿望写具体/);

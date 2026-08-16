@@ -127,8 +127,9 @@ export default function Home() {
 
       <section className="about-section" id="about" aria-labelledby="about-title">
         <div className="about-title">
-          <span className="eyebrow light">ABOUT / 关于与航</span>
-          <h2 id="about-title">在确定与不确定之间，<br /><em>认真生活。</em></h2>
+          <span className="eyebrow light">ABOUT</span>
+          <h2 id="about-title">Vast as the world may be,<br /><em>I keep moving toward the horizon.</em></h2>
+          <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
         </div>
         <div className="about-content">
           <div className="portrait-card" aria-label="与航的抽象人物肖像">
@@ -206,7 +207,7 @@ export default function Home() {
               <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
               <div className="app-card-copy">
                 <h3><a href="https://relay.inbsu.com" target="_blank" rel="noreferrer">Relay</a></h3>
-                <p>Wander the World.<span className="app-tagline-cn" lang="zh-CN">看世界</span></p>
+                <p>Explore the world.<span className="app-tagline-cn" lang="zh-CN">看世界</span></p>
               </div>
             </div>
             <a className="app-domain" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
