@@ -9,6 +9,10 @@
     {
       "pattern": "inbsu.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "www.inbsu.com",
+      "custom_domain": true
     }
   ],
   "assets": {

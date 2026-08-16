@@ -2,14 +2,14 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+async function render(url = "https://inbsu.com/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("https://inbsu.com/", {
-      headers: { accept: "text/html", host: "inbsu.com" },
+    new Request(url, {
+      headers: { accept: "text/html" },
     }),
     {
       ASSETS: {
@@ -36,6 +36,15 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /林屿|linyu\.design/);
 });
 
+test("redirects www to the canonical apex domain", async () => {
+  const response = await render("https://www.inbsu.com/travel?from=www");
+  assert.equal(response.status, 301);
+  assert.equal(
+    response.headers.get("location"),
+    "https://inbsu.com/travel?from=www",
+  );
+});
+
 test("build emits a deployable Cloudflare Worker", async () => {
   const config = JSON.parse(
     await readFile(new URL("../dist/server/wrangler.json", import.meta.url), "utf8"),
@@ -49,5 +58,6 @@ test("build emits a deployable Cloudflare Worker", async () => {
   assert.equal(config.assets.binding, "ASSETS");
   assert.deepEqual(config.routes, [
     { pattern: "inbsu.com", custom_domain: true },
+    { pattern: "www.inbsu.com", custom_domain: true },
   ]);
 });

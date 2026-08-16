@@ -44,4 +44,5 @@ npm run deploy
 ```
 
 自定义域名 `inbsu.com` 已通过 `wrangler.jsonc` 绑定到 Worker。Cloudflare
-负责证书签发和流量路由，域名现有的邮件 MX/TXT 记录保持不变。
+负责证书签发和流量路由，`www.inbsu.com` 会永久重定向到根域名，域名
+现有的邮件 MX/TXT 记录保持不变。
