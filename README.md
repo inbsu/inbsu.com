@@ -43,5 +43,5 @@ npm test
 npm run deploy
 ```
 
-为了避免切换期间中断访问，自定义域名 `inbsu.com` 暂不写入 Worker
-配置。先确认 `workers.dev` 地址正常，再把域名从原托管服务切换到新 Worker。
+自定义域名 `inbsu.com` 已通过 `wrangler.jsonc` 绑定到 Worker。Cloudflare
+负责证书签发和流量路由，域名现有的邮件 MX/TXT 记录保持不变。

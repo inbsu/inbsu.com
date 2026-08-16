@@ -47,4 +47,7 @@ test("build emits a deployable Cloudflare Worker", async () => {
   assert.deepEqual(config.compatibility_flags, ["nodejs_compat"]);
   assert.equal(config.assets.directory, "../client");
   assert.equal(config.assets.binding, "ASSETS");
+  assert.deepEqual(config.routes, [
+    { pattern: "inbsu.com", custom_domain: true },
+  ]);
 });
