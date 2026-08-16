@@ -192,33 +192,48 @@ export default function Home() {
           </div>
         </header>
         <div className="apps-grid">
-          <a className="app-card app-relay" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
-            <div className="app-card-top"><span>01</span><span>SELF-HOSTED ↗</span></div>
+          <article className="app-card app-relay">
+            <div className="app-card-top">
+              <span>01</span>
+              <a href="https://github.com/MHSanaei/3x-ui" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI project">POWERED BY 3X-UI ↗</a>
+            </div>
             <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
-              <h3>Relay</h3>
-              <p>A lightweight, self-hosted relay service.</p>
-              <small>relay.inbsu.com</small>
+              <h3><a href="https://relay.inbsu.com" target="_blank" rel="noreferrer">Relay</a></h3>
+              <p>Wander the World.</p>
+              <a className="app-domain" href="https://relay.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Relay in a new tab">
+                <span>relay.inbsu.com</span><span aria-hidden="true">↗</span>
+              </a>
             </div>
-          </a>
-          <a className="app-card app-photos" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
-            <div className="app-card-top"><span>02</span><span>SELF-HOSTED ↗</span></div>
+          </article>
+          <article className="app-card app-photos">
+            <div className="app-card-top">
+              <span>02</span>
+              <a href="https://immich.app/" target="_blank" rel="noreferrer" aria-label="Visit the official Immich website">POWERED BY IMMICH ↗</a>
+            </div>
             <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
-              <h3>Photos</h3>
-              <p>A self-hosted library for personal photos.</p>
-              <small>photos.inbsu.com</small>
+              <h3><a href="https://photos.inbsu.com" target="_blank" rel="noreferrer">Photos</a></h3>
+              <p>Revisit the Past.</p>
+              <a className="app-domain" href="https://photos.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Photos in a new tab">
+                <span>photos.inbsu.com</span><span aria-hidden="true">↗</span>
+              </a>
             </div>
-          </a>
-          <a className="app-card app-media" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
-            <div className="app-card-top"><span>03</span><span>SELF-HOSTED ↗</span></div>
-            <div className="app-mark mark-media" aria-hidden="true"><i /><b /></div>
+          </article>
+          <article className="app-card app-media">
+            <div className="app-card-top">
+              <span>03</span>
+              <a href="https://jellyfin.org/" target="_blank" rel="noreferrer" aria-label="Visit the official Jellyfin website">POWERED BY JELLYFIN ↗</a>
+            </div>
+            <div className="app-mark mark-videos" aria-hidden="true" />
             <div className="app-card-copy">
-              <h3>Videos</h3>
-              <p>A self-hosted library for video collections.</p>
-              <small>v.inbsu.com</small>
+              <h3><a href="https://v.inbsu.com" target="_blank" rel="noreferrer">Videos</a></h3>
+              <p>Hold What I Love Close.</p>
+              <a className="app-domain" href="https://v.inbsu.com" target="_blank" rel="noreferrer" aria-label="Open Videos in a new tab">
+                <span>v.inbsu.com</span><span aria-hidden="true">↗</span>
+              </a>
             </div>
-          </a>
+          </article>
         </div>
       </section>
 

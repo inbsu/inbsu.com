@@ -43,6 +43,17 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /https:\/\/photos\.inbsu\.com/);
   assert.match(html, /https:\/\/v\.inbsu\.com/);
   assert.match(html, />Videos</);
+  assert.match(html, /POWERED BY 3X-UI/);
+  assert.match(html, /POWERED BY IMMICH/);
+  assert.match(html, /POWERED BY JELLYFIN/);
+  assert.match(html, /https:\/\/github\.com\/MHSanaei\/3x-ui/);
+  assert.match(html, /https:\/\/immich\.app\//);
+  assert.match(html, /https:\/\/jellyfin\.org\//);
+  assert.match(html, /Wander the World\./);
+  assert.match(html, /Revisit the Past\./);
+  assert.match(html, /Hold What I Love Close\./);
+  assert.doesNotMatch(html, /SELF-HOSTED/);
+  assert.doesNotMatch(html, /A lightweight, self-hosted relay service|A self-hosted library for personal photos|A self-hosted library for video collections/);
   assert.doesNotMatch(html, /Media Library/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
   assert.doesNotMatch(html, /把愿望写具体/);

@@ -135,6 +135,8 @@ a { color: inherit; text-decoration: none; }
 .app-card:first-child { padding-left: 0; }
 .app-card:last-child { border-right: 0; padding-right: 0; }
 .app-card-top { display: flex; justify-content: space-between; font-size: 9px; font-weight: 800; letter-spacing: .12em; }
+.app-card-top a { padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.app-card-top a:hover { color: var(--butter); border-bottom-color: currentColor; }
 .app-mark { width: 68px; height: 68px; margin: 29px 0 24px; position: relative; color: var(--ink); }
 .app-mark i, .app-mark b { display: block; position: absolute; }
 .mark-relay { border-radius: 50%; background: var(--sky); }
@@ -145,17 +147,17 @@ a { color: inherit; text-decoration: none; }
 .mark-photos { border: 3px solid var(--ink); background: var(--clay); box-shadow: 5px 5px 0 var(--sky); transform: rotate(-3deg); }
 .mark-photos i { width: 26%; aspect-ratio: 1; border-radius: 50%; background: var(--butter); right: 13%; top: 12%; }
 .mark-photos b { width: 82%; height: 47%; left: 9%; bottom: 8%; background: var(--moss); clip-path: polygon(0 100%, 37% 22%, 57% 60%, 74% 34%, 100% 100%); }
-.mark-media { background: var(--butter); box-shadow: 6px 6px 0 var(--clay); }
-.mark-media::before, .mark-media::after { content: ""; position: absolute; left: 16%; right: 16%; height: 3px; background: var(--ink); }
-.mark-media::before { top: 25%; box-shadow: 0 28px 0 var(--ink), 0 56px 0 var(--ink); }
-.mark-media::after { width: 16px; height: 16px; left: 71%; right: auto; top: 18%; border-radius: 50%; box-shadow: 0 28px 0 var(--ink), 0 56px 0 var(--ink); }
+.mark-videos { border: 3px solid var(--ink); border-radius: 5px; background: var(--butter); box-shadow: 6px 6px 0 var(--clay); }
+.mark-videos::before { content: ""; position: absolute; z-index: 2; left: 40%; top: 28%; width: 0; height: 0; border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 23px solid var(--ink); }
+.mark-videos::after { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(27,32,29,.45); }
 .app-card-copy { margin-top: auto; }
 .app-card h3 { margin: 0 0 9px; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px, 2.6vw, 38px); line-height: 1; letter-spacing: -.035em; font-weight: 500; }
+.app-card h3 a { display: inline-block; }
 .app-card p { margin: 0 0 18px; color: #aeb7b0; font-size: 12px; line-height: 1.6; }
-.app-card small { display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid rgba(251,248,239,.3); font-size: 9px; font-weight: 800; letter-spacing: .06em; }
-.app-card small::after { content: "↗"; font-size: 15px; transition: transform .2s; }
-.app-card:hover small::after { transform: translate(4px, -4px); }
-.app-card:focus-visible { outline: 3px solid var(--butter); outline-offset: -3px; }
+.app-domain { display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid rgba(251,248,239,.3); font-size: 9px; font-weight: 800; letter-spacing: .06em; }
+.app-domain span:last-child { font-size: 15px; transition: transform .2s; }
+.app-domain:hover span:last-child { transform: translate(4px, -4px); }
+.app-card-top a:focus-visible, .app-card h3 a:focus-visible, .app-domain:focus-visible { outline: 2px solid var(--butter); outline-offset: 4px; }
 
 .contact-section { min-height: 78vh; padding: 125px 4.5vw 80px; background: var(--butter); display: flex; flex-direction: column; }
 .contact-section h2 { margin: auto 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(62px, 9.4vw, 145px); line-height: .95; letter-spacing: -.07em; font-weight: 500; }
