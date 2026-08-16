@@ -193,7 +193,6 @@ export default function Home() {
           <span className="eyebrow light">MY APPS</span>
           <div>
             <h2 id="apps-title">Self-hosted, <em>made for everyday use.</em></h2>
-            <p>Built around everyday needs, then maintained at my own pace.</p>
           </div>
         </header>
         <div className="apps-grid">
