@@ -147,7 +147,9 @@ export default function Home() {
             <p>人生不必事事圆满。</p>
             <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
             <p className="about-signoff">向前看。</p>
-            <a href="mailto:hello@inbsu.com">hello@inbsu.com ↗</a>
+            <div className="about-links" aria-label="Social link">
+              <a href="https://x.com/yuinbsu" target="_blank" rel="noreferrer">X · @yuinbsu ↗</a>
+            </div>
           </div>
         </div>
       </section>
@@ -246,13 +248,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 暂时隐藏的大块联系栏目，邮箱入口仍保留在顶部导航中。
+      {/* 暂时隐藏的大块社交栏目。
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <span className="eyebrow">SAY HELLO / 写封信</span>
         <h2 id="contact-title">如果你也在路上，<br /><em>欢迎来信。</em></h2>
         <div className="contact-row">
           <p>分享一本书、一段旅程，或者只是打声招呼。</p>
-          <a href="mailto:hello@inbsu.com">hello@inbsu.com <span aria-hidden="true">↗</span></a>
+          <a href="https://x.com/yuinbsu">X · @yuinbsu <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       */}
