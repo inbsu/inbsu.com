@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /* 暂时隐藏的示例文章数据，后续有真实文章时可直接取消注释。
 const notes = [
   {
@@ -43,7 +45,7 @@ export default function Home() {
           <a href="#about">关于</a>
           <a href="#plans">计划</a>
           */}
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <a href="#apps">Apps</a>
         </div>
         <div className="nav-actions">
