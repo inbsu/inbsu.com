@@ -83,9 +83,14 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /比起留下谁，我更在意留下些什么——/);
   assert.match(html, /class="about-signoff">向前看。/);
   assert.match(html, /class="about-elsewhere"/);
+  assert.match(html, /about-volcano-portrait\.jpg/);
+  assert.match(html, /与航站在喷发的火山前/);
+  assert.doesNotMatch(html, /portrait-sky|portrait-face|portrait-shirt/);
   assert.match(html, />鸡蛋 \/ 2026<\/span>/);
   assert.doesNotMatch(html, />YH \/ 2026<\/span>/);
   assert.match(html, /id="elsewhere-title">ELSEWHERE/);
+  assert.match(html, /https:\/\/github\.com\/inbsu/);
+  assert.match(html, /GitHub · @inbsu/);
   assert.doesNotMatch(html, /class="about-links"/);
   assert.doesNotMatch(html, /此刻 \/ NOW|正在读|《远山淡影》|自由泳换气|大理 · 九月|循环播放|橘子海|最后更新/);
   assert.doesNotMatch(html, /人生或许不必|继续向前的理由|有些时刻并不轰轰烈烈|我用文字保存那些容易被忘记的部分|这个网站是我的公开笔记本/);

@@ -135,10 +135,13 @@ export default function Home() {
           </div>
         </header>
         <div className="about-content">
-          <div className="portrait-card" aria-label="与航的抽象人物肖像">
-            <div className="portrait-sky" />
-            <div className="portrait-face" />
-            <div className="portrait-shirt" />
+          <div className="portrait-card">
+            <img
+              src="/about-volcano-portrait.jpg"
+              alt="与航站在喷发的火山前"
+              width={1100}
+              height={1100}
+            />
             <span>鸡蛋 / 2026</span>
           </div>
           <div className="about-copy">
@@ -156,6 +159,9 @@ export default function Home() {
               </a>
               <a href="https://www.youtube.com/@inbsu" target="_blank" rel="noreferrer">
                 <span>YouTube · @inbsu</span><span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/inbsu" target="_blank" rel="noreferrer">
+                <span>GitHub · @inbsu</span><span aria-hidden="true">↗</span>
               </a>
             </div>
           </aside>
