@@ -37,6 +37,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /hero-yuhang-temple\.jpg/);
   assert.match(html, /A hand-drawn travel portrait of Yu Hang/);
   assert.match(html, /MY APPS/);
+  assert.match(html, /href="\/">Home<\/a>/);
+  assert.doesNotMatch(html, /href="\/#top">Home<\/a>/);
   assert.match(html, /data-future-path="\/cn"/);
   assert.match(html, />中文<\/button>/);
   assert.match(html, /https:\/\/relay\.inbsu\.com/);

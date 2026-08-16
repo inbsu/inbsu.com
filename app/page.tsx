@@ -43,6 +43,7 @@ export default function Home() {
           <a href="#about">关于</a>
           <a href="#plans">计划</a>
           */}
+          <a href="/">Home</a>
           <a href="#apps">Apps</a>
         </div>
         <div className="nav-actions">
