@@ -46,7 +46,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /POWERED BY 3X-UI/);
   assert.match(html, /POWERED BY IMMICH/);
   assert.match(html, /POWERED BY JELLYFIN/);
-  assert.match(html, /https:\/\/github\.com\/MHSanaei\/3x-ui/);
+  assert.match(html, /https:\/\/docs\.sanaei\.dev\//);
+  assert.doesNotMatch(html, /https:\/\/github\.com\/MHSanaei\/3x-ui/);
   assert.match(html, /https:\/\/immich\.app\//);
   assert.match(html, /https:\/\/jellyfin\.org\//);
   assert.match(html, /Wander the World\./);

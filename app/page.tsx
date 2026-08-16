@@ -195,7 +195,7 @@ export default function Home() {
           <article className="app-card app-relay">
             <div className="app-card-top">
               <span>01</span>
-              <a href="https://github.com/MHSanaei/3x-ui" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI project">POWERED BY 3X-UI ↗</a>
+              <a href="https://docs.sanaei.dev/" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI website">POWERED BY 3X-UI ↗</a>
             </div>
             <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
             <div className="app-card-copy">
