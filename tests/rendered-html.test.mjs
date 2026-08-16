@@ -36,9 +36,9 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /足迹所至，岁月如流。/);
   assert.doesNotMatch(html, /hello@inbsu\.com|mailto:/);
   assert.match(html, /https:\/\/x\.com\/yuinbsu/);
-  assert.match(html, /X · @yuinbsu ↗/);
+  assert.match(html, /X · @yuinbsu/);
   assert.match(html, /https:\/\/www\.youtube\.com\/@inbsu/);
-  assert.match(html, /YouTube · @inbsu ↗/);
+  assert.match(html, /YouTube · @inbsu/);
   assert.match(html, /hero-yuhang-temple\.jpg/);
   assert.match(html, /A hand-drawn travel portrait of Yu Hang/);
   assert.match(html, /MY APPS/);
@@ -82,6 +82,9 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /人生不必事事圆满。/);
   assert.match(html, /比起留下谁，我更在意留下些什么——/);
   assert.match(html, /class="about-signoff">向前看。/);
+  assert.match(html, /class="about-elsewhere"/);
+  assert.match(html, /id="elsewhere-title">ELSEWHERE/);
+  assert.doesNotMatch(html, /class="about-links"/);
   assert.doesNotMatch(html, /此刻 \/ NOW|正在读|《远山淡影》|自由泳换气|大理 · 九月|循环播放|橘子海|最后更新/);
   assert.doesNotMatch(html, /人生或许不必|继续向前的理由|有些时刻并不轰轰烈烈|我用文字保存那些容易被忘记的部分|这个网站是我的公开笔记本/);
   assert.doesNotMatch(html, /在潮州，沿着韩江走到天黑/);
