@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 /* 暂时隐藏的示例文章数据，后续有真实文章时可直接取消注释。
 const notes = [
   {
@@ -44,7 +42,9 @@ export default function Home() {
           <a href="#notes">文章</a>
           <a href="#plans">计划</a>
           */}
-          <Link href="/">Home</Link>
+          {/* Plain anchor avoids an unnecessary RSC prefetch on the Worker runtime. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a href="/">Home</a>
           <a href="#about">About</a>
           <a href="#apps">Apps</a>
         </div>
