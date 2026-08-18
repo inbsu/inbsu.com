@@ -151,20 +151,6 @@ export default function Home() {
             <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
             <p className="about-signoff">向前看。</p>
           </div>
-          <aside className="about-elsewhere" aria-labelledby="elsewhere-title">
-            <h3 id="elsewhere-title">ELSEWHERE</h3>
-            <div>
-              <a href="https://x.com/yuinbsu" target="_blank" rel="noreferrer">
-                <span>X · @yuinbsu</span><span aria-hidden="true">↗</span>
-              </a>
-              <a href="https://www.youtube.com/@inbsu" target="_blank" rel="noreferrer">
-                <span>YouTube · @inbsu</span><span aria-hidden="true">↗</span>
-              </a>
-              <a href="https://github.com/inbsu" target="_blank" rel="noreferrer">
-                <span>GitHub · @inbsu</span><span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </aside>
         </div>
       </section>
 
@@ -268,7 +254,6 @@ export default function Home() {
         <h2 id="contact-title">如果你也在路上，<br /><em>欢迎来信。</em></h2>
         <div className="contact-row">
           <p>分享一本书、一段旅程，或者只是打声招呼。</p>
-          <a href="https://x.com/yuinbsu">X · @yuinbsu <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       */}
