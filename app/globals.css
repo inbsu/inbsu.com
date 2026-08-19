@@ -121,7 +121,7 @@ a { color: inherit; text-decoration: none; }
 .plans-grid small { margin-top: 11px; color: #656b66; font-size: 9px; }
 
 .apps-section { padding: 64px 4.5vw 60px; background: var(--ink); color: var(--cream); }
-.apps-heading { display: grid; grid-template-columns: .45fr 1.55fr; align-items: start; gap: 4vw; margin-bottom: 42px; }
+.apps-heading { display: grid; grid-template-columns: .58fr 1.42fr; align-items: start; gap: 4vw; margin-bottom: 42px; }
 .apps-heading h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(36px, 4vw, 58px); line-height: 1.05; letter-spacing: -.045em; font-weight: 500; }
 .apps-heading h2 em { color: var(--sky); font-weight: 500; }
 .apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(251,248,239,.42); border-bottom: 1px solid rgba(251,248,239,.42); }
