@@ -260,7 +260,7 @@ export default function Home() {
 
       <footer>
         <p>© 2026 与航</p>
-        <p>INBSU.COM · 向前看</p>
+        <p>ASTROYU.COM · 向前看</p>
         <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>

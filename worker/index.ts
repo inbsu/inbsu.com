@@ -1,4 +1,4 @@
-/** Cloudflare Worker entry point for inbsu.com. */
+/** Cloudflare Worker entry point for astroyu.com. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
@@ -28,8 +28,8 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.hostname === "www.inbsu.com") {
-      url.hostname = "inbsu.com";
+    if (url.hostname === "www.astroyu.com") {
+      url.hostname = "astroyu.com";
       return Response.redirect(url.toString(), 301);
     }
 

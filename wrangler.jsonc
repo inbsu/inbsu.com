@@ -7,11 +7,11 @@
   "workers_dev": true,
   "routes": [
     {
-      "pattern": "inbsu.com",
+      "pattern": "astroyu.com",
       "custom_domain": true
     },
     {
-      "pattern": "www.inbsu.com",
+      "pattern": "www.astroyu.com",
       "custom_domain": true
     }
   ],

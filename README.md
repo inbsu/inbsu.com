@@ -1,4 +1,4 @@
-# inbsu.com
+# astroyu.com
 
 与航的个人生活志，记录生活、旅行和一些正在发生的计划。
 
@@ -43,6 +43,7 @@ npm test
 npm run deploy
 ```
 
-自定义域名 `inbsu.com` 已通过 `wrangler.jsonc` 绑定到 Worker。Cloudflare
-负责证书签发和流量路由，`www.inbsu.com` 会永久重定向到根域名，域名
-现有的邮件 MX/TXT 记录保持不变。
+自定义域名 `astroyu.com` 已通过 `wrangler.jsonc` 绑定到 Worker。Cloudflare
+负责证书签发和流量路由，`www.astroyu.com` 会永久重定向到根域名。
+原个人主页域名 `inbsu.com` 与 `www.inbsu.com` 不再绑定此 Worker；Relay、
+Photos 和 Videos 等 `*.inbsu.com` 应用地址保持不变。

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render(url = "https://inbsu.com/") {
+async function render(url = "https://astroyu.com/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
@@ -97,7 +97,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /31 JANUARY 2026/);
   assert.match(html, /Beijing, China/);
   assert.doesNotMatch(html, /ISSUE 0[18] · 2026/);
-  assert.match(html, /INBSU\.COM · 向前看/);
+  assert.match(html, /ASTROYU\.COM · 向前看/);
   assert.match(html, /© 2026 与航/);
   assert.doesNotMatch(html, /© 2026 YU HANG/);
   assert.doesNotMatch(html, /记录走过的路|我的应用|向下看我的应用/);
@@ -109,11 +109,11 @@ test("server-renders Yu Hang's personal journal", async () => {
 });
 
 test("redirects www to the canonical apex domain", async () => {
-  const response = await render("https://www.inbsu.com/travel?from=www");
+  const response = await render("https://www.astroyu.com/travel?from=www");
   assert.equal(response.status, 301);
   assert.equal(
     response.headers.get("location"),
-    "https://inbsu.com/travel?from=www",
+    "https://astroyu.com/travel?from=www",
   );
 });
 
@@ -129,7 +129,7 @@ test("build emits a deployable Cloudflare Worker", async () => {
   assert.equal(config.assets.directory, "../client");
   assert.equal(config.assets.binding, "ASSETS");
   assert.deepEqual(config.routes, [
-    { pattern: "inbsu.com", custom_domain: true },
-    { pattern: "www.inbsu.com", custom_domain: true },
+    { pattern: "astroyu.com", custom_domain: true },
+    { pattern: "www.astroyu.com", custom_domain: true },
   ]);
 });
