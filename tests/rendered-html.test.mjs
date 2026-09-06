@@ -49,9 +49,9 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /https:\/\/photos\.inbsu\.com/);
   assert.match(html, /https:\/\/v\.inbsu\.com/);
   assert.match(html, />Videos</);
-  assert.match(html, /POWERED BY 3X-UI/);
-  assert.match(html, /POWERED BY IMMICH/);
-  assert.match(html, /POWERED BY JELLYFIN/);
+  assert.match(html, />3X-UI ↗<\/a>/);
+  assert.match(html, />IMMICH ↗<\/a>/);
+  assert.match(html, />JELLYFIN ↗<\/a>/);
   assert.match(html, /https:\/\/docs\.sanaei\.dev\//);
   assert.doesNotMatch(html, /https:\/\/github\.com\/MHSanaei\/3x-ui/);
   assert.match(html, /https:\/\/immich\.app\//);
@@ -84,8 +84,8 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.match(html, /about-volcano-portrait\.jpg/);
   assert.match(html, /与航站在喷发的火山前/);
   assert.doesNotMatch(html, /portrait-sky|portrait-face|portrait-shirt/);
-  assert.match(html, />鸡蛋 \/ 2026<\/span>/);
-  assert.doesNotMatch(html, />YH \/ 2026<\/span>/);
+  assert.match(html, />鸡蛋 \/ 2026<\/figcaption>/);
+  assert.doesNotMatch(html, />YH \/ 2026<\/figcaption>/);
   assert.doesNotMatch(html, /class="about-links"/);
   assert.doesNotMatch(html, /此刻 \/ NOW|正在读|《远山淡影》|自由泳换气|大理 · 九月|循环播放|橘子海|最后更新/);
   assert.doesNotMatch(html, /人生或许不必|继续向前的理由|有些时刻并不轰轰烈烈|我用文字保存那些容易被忘记的部分|这个网站是我的公开笔记本/);
@@ -95,7 +95,7 @@ test("server-renders Yu Hang's personal journal", async () => {
   assert.doesNotMatch(html, /向下读最近的文章/);
   assert.doesNotMatch(html, /Explore my apps/);
   assert.match(html, /31 JANUARY 2026/);
-  assert.match(html, /Beijing, China/);
+  assert.match(html, /BEIJING, CHINA/);
   assert.doesNotMatch(html, /ISSUE 0[18] · 2026/);
   assert.match(html, /ASTROYU\.COM · 向前看/);
   assert.match(html, /© 2026 与航/);

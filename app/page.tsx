@@ -34,48 +34,51 @@ export default function Home() {
   return (
     <main id="top">
       <nav className="nav" aria-label="Main navigation">
-        <a className="wordmark" href="#top" aria-label="Back to top">
-          与航<span>。</span>
-        </a>
-        <div className="nav-links">
+        <div className="site-shell nav-inner">
+          <a className="wordmark" href="#top" aria-label="Back to top">
+            与航<span>。</span>
+          </a>
+          <div className="nav-links">
           {/* 暂时隐藏尚未启用的内容入口，后续可直接恢复。
           <a href="#notes">文章</a>
           <a href="#plans">计划</a>
           */}
           {/* Plain anchor avoids an unnecessary RSC prefetch on the Worker runtime. */}
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a href="/">Home</a>
-          <a href="#about">About</a>
-          <a href="#apps">Apps</a>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#apps">Apps</a>
+            <span className="language-link" aria-label="Chinese version coming later">中文</span>
+          </div>
         </div>
       </nav>
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-grid">
+        <div className="site-shell hero-grid">
           <div className="hero-copy">
+            <p className="hero-kicker"><span className="status-dot" /> ASTROYU · 2026</p>
+            <h1 id="hero-title">
+              Places I’ve been.<br />
+              <em>Days as they unfold.</em>
+            </h1>
+            <p className="hero-translation" lang="zh-CN">足迹所至，岁月如流。</p>
             <div className="hero-meta">
               <span>31 JANUARY 2026</span>
-              <span className="hero-location">Beijing, China</span>
-            </div>
-            <div className="hero-title-group">
-              <h1 id="hero-title">
-                Places I’ve been,
-                <em>days as they unfold.</em>
-              </h1>
-              <p className="hero-translation" lang="zh-CN">足迹所至，岁月如流。</p>
+              <span>BEIJING, CHINA</span>
             </div>
             {/* 原文章入口暂时保留，恢复文章栏目时可重新启用。
             <a href="#notes">Read the latest notes <span aria-hidden="true">↓</span></a>
             */}
           </div>
-          <div className="hero-poster">
+          <figure className="hero-poster">
             <img
               src="/hero-yuhang-temple.jpg"
               alt="A hand-drawn travel portrait of Yu Hang and a friend at the Temple of Heaven"
               width={1086}
               height={1448}
             />
-          </div>
+            <figcaption><span>TEMPLE OF HEAVEN</span><span>01 / 2026</span></figcaption>
+          </figure>
         </div>
       </section>
 
@@ -127,29 +130,31 @@ export default function Home() {
       */}
 
       <section className="about-section" id="about" aria-labelledby="about-title">
-        <header className="about-heading">
-          <span className="eyebrow light">ABOUT</span>
-          <div>
-            <h2 id="about-title">Vast as the world may be,<br /><em>I keep moving toward the horizon.</em></h2>
-            <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
-          </div>
-        </header>
-        <div className="about-content">
-          <div className="portrait-card">
-            <img
-              src="/about-volcano-portrait.jpg"
-              alt="与航站在喷发的火山前"
-              width={1100}
-              height={1100}
-            />
-            <span>鸡蛋 / 2026</span>
-          </div>
-          <div className="about-copy">
-            <p className="about-lead">我去过一些地方，<br />也遇见过一些人。</p>
-            <p>有些同行很久，有些只陪一程，但那些发生过的事，都慢慢成为了今天的我。</p>
-            <p>人生不必事事圆满。</p>
-            <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
-            <p className="about-signoff">向前看。</p>
+        <div className="site-shell about-panel">
+          <header className="about-heading">
+            <span className="eyebrow light">ABOUT</span>
+            <div>
+              <h2 id="about-title">Vast as the world may be,<br /><em>I keep moving toward the horizon.</em></h2>
+              <p className="about-translation" lang="zh-CN">纵天地巍峨，仍向远方行。</p>
+            </div>
+          </header>
+          <div className="about-content">
+            <figure className="portrait-card">
+              <img
+                src="/about-volcano-portrait.jpg"
+                alt="与航站在喷发的火山前"
+                width={1100}
+                height={1100}
+              />
+              <figcaption>鸡蛋 / 2026</figcaption>
+            </figure>
+            <div className="about-copy">
+              <p className="about-lead">我去过一些地方，<br />也遇见过一些人。</p>
+              <p>有些同行很久，有些只陪一程，但那些发生过的事，都慢慢成为了今天的我。</p>
+              <p>人生不必事事圆满。</p>
+              <p>比起留下谁，我更在意留下些什么——一段记忆，一种喜欢，一点改变。</p>
+              <p className="about-signoff">向前看。</p>
+            </div>
           </div>
         </div>
       </section>
@@ -190,20 +195,21 @@ export default function Home() {
       */}
 
       <section className="apps-section" id="apps" aria-labelledby="apps-title">
-        <header className="apps-heading">
-          <span className="eyebrow light">MY APPS</span>
-          <div>
-            <h2 id="apps-title">Self-hosted, <em>made for everyday use.</em></h2>
-          </div>
-        </header>
-        <div className="apps-grid">
+        <div className="site-shell">
+          <header className="apps-heading">
+            <span className="eyebrow">MY APPS</span>
+            <div>
+              <h2 id="apps-title">Self-hosted tools,<br /><em>kept close.</em></h2>
+            </div>
+          </header>
+          <div className="apps-grid">
           <article className="app-card app-relay">
             <div className="app-card-top">
               <span>01</span>
-              <a href="https://docs.sanaei.dev/" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI website">POWERED BY 3X-UI ↗</a>
+              <a href="https://docs.sanaei.dev/" target="_blank" rel="noreferrer" aria-label="Visit the official 3X-UI website">3X-UI ↗</a>
             </div>
             <div className="app-card-content">
-              <div className="app-mark mark-relay" aria-hidden="true"><i /><b /></div>
+              <div className="app-mark mark-relay" aria-hidden="true">R</div>
               <div className="app-card-copy">
                 <h3><a href="https://relay.inbsu.com" target="_blank" rel="noreferrer">Relay</a></h3>
                 <p>Explore the world.<span className="app-tagline-cn" lang="zh-CN">看世界</span></p>
@@ -216,10 +222,10 @@ export default function Home() {
           <article className="app-card app-photos">
             <div className="app-card-top">
               <span>02</span>
-              <a href="https://immich.app/" target="_blank" rel="noreferrer" aria-label="Visit the official Immich website">POWERED BY IMMICH ↗</a>
+              <a href="https://immich.app/" target="_blank" rel="noreferrer" aria-label="Visit the official Immich website">IMMICH ↗</a>
             </div>
             <div className="app-card-content">
-              <div className="app-mark mark-photos" aria-hidden="true"><i /><b /></div>
+              <div className="app-mark mark-photos" aria-hidden="true">P</div>
               <div className="app-card-copy">
                 <h3><a href="https://photos.inbsu.com" target="_blank" rel="noreferrer">Photos</a></h3>
                 <p>Revisit the past.<span className="app-tagline-cn" lang="zh-CN">忆往昔</span></p>
@@ -232,10 +238,10 @@ export default function Home() {
           <article className="app-card app-media">
             <div className="app-card-top">
               <span>03</span>
-              <a href="https://jellyfin.org/" target="_blank" rel="noreferrer" aria-label="Visit the official Jellyfin website">POWERED BY JELLYFIN ↗</a>
+              <a href="https://jellyfin.org/" target="_blank" rel="noreferrer" aria-label="Visit the official Jellyfin website">JELLYFIN ↗</a>
             </div>
             <div className="app-card-content">
-              <div className="app-mark mark-videos" aria-hidden="true" />
+              <div className="app-mark mark-videos" aria-hidden="true">▶</div>
               <div className="app-card-copy">
                 <h3><a href="https://v.inbsu.com" target="_blank" rel="noreferrer">Videos</a></h3>
                 <p>Hold what I love close.<span className="app-tagline-cn" lang="zh-CN">藏所爱</span></p>
@@ -245,6 +251,7 @@ export default function Home() {
               <span>v.inbsu.com</span><span aria-hidden="true">↗</span>
             </a>
           </article>
+          </div>
         </div>
       </section>
 
